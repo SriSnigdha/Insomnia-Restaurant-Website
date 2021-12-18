@@ -1,0 +1,732 @@
+<html>
+<head>
+<title>Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+</script>
+ <style>
+body, html, .main {
+  height: 100%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #ff3300;
+  color: white;
+  transform: rotateY(180deg);
+}
+section {
+  min-height: 100%;
+}
+#menu {
+  background-color: tomato;
+  color: black;
+  padding: 40px;
+  text-align: center;
+} 
+body {
+  background-image: url("menu.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 0px;
+  background-attachment: fixed;
+}
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.right {
+  float: right;
+  width: 300px;
+  padding: 10px;
+}
+img {
+  width: 20%;
+  height:35%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #ff6347;
+}
+</style>
+</head>
+<body>
+<h1 id="menu" style="font-size:200%;"><font face="garamond">Menu</h1></font>
+<ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="menu.html">Menu</a></li>
+  <li><a href="special.html">Chef's Special</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="offers.html">Offers</a></li>
+  <li><a href="birthday.html">Birthday Special</a></li>
+</ul>
+<h1 style="color:Slateblue;">Our Menu</h1>
+<h2 style="color:Black;"><a href="#indian">Indian</a></h2>
+<h2 style="color:Black;"><a href="#italian">Italian</a></h2>
+<h2 style="color:Black;"><a href="#japanese">Japanese</a></h2>
+<h2 style="color:Black;"><a href="#chinese">Chinese</a></h2>
+<h2 style="color:Black;"><a href="#desserts">Desserts</a></h2>
+<div class="main">
+  <section></section>
+</div>
+
+<div class="main" id="indian">
+
+<table style="width:100%">
+<caption><h1 style="color:Tomato;">Indian</h1></caption>
+  <tr>
+  <th><div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="thali.jpg" alt="Thali" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Thali</h1>
+    <h3>Price:</h3>
+    <h2>Rs 350/-</h2>
+    </div>
+  </div>
+</div>
+</th>
+
+<th>
+<div class="center">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="biryani.jpg" alt="Biryani" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Chicken Biryani</h1>
+    <h3>Price:</h3>
+    <h2>Rs 400/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</th>
+
+<th>
+<div class="right">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="roti.jpg" alt="Roti" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Roti n'Curry</h1>
+    <h3>Price:</h3>
+    <h2>Rs 200/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</th>
+</tr>
+
+
+<tr>
+  <td><div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="dosa.jpg" alt="Dosa" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Dosa</h1>
+    <h3>Price:</h3>
+    <h2>Rs 35/-</h2>
+    </div>
+  </div>
+</div>
+</td>
+
+<td>
+<div class="center">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="upma.jpg" alt="Upma" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Upma</h1>
+    <h3>Price:</h3>
+    <h2>Rs 40/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</td>
+
+<td>
+<div class="right">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="idli.jpg" alt="Idli" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Idli</h1>
+    <h3>Price:</h3>
+    <h2>Rs 30/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</td>
+</tr>
+
+
+</table> 
+</div>
+
+
+
+</section>
+</div>
+
+<div class="main" id="italian">
+
+<table style="width:100%">
+<caption><h1 style="color:Tomato;">Italian</h1></caption>
+  <tr>
+  <th><div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="pizza.jpg" alt="Pizza" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Pizza</h1>
+    <h3>Price:</h3>
+    <h2>Rs 250/-</h2>
+    </div>
+  </div>
+</div>
+</th>
+
+<th>
+<div class="center">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="pasta.jpg" alt="Pasta" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Pasta</h1>
+    <h3>Price:</h3>
+    <h2>Rs 150/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</th>
+
+<th>
+<div class="right">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="ravioli.jpg" alt="Ravioli" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Ravioli</h1>
+    <h3>Price:</h3>
+    <h2>Rs 100/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</th>
+</tr>
+
+
+<tr>
+  <td><div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="cannelloni.jpeg" alt="Cannelloni" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Cannelloni</h1>
+    <h3>Price:</h3>
+    <h2>Rs 200/-</h2>
+    </div>
+  </div>
+</div>
+</td>
+
+<td>
+<div class="center">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="bruschetta.jpg" alt="Bruschetta" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Bruschetta</h1>
+    <h3>Price:</h3>
+    <h2>Rs 150/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</td>
+
+<td>
+<div class="right">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="tiramisu.jpg" alt="Tiramisu" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Tiramisu</h1>
+    <h3>Price:</h3>
+    <h2>Rs 120/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</td>
+</tr>
+
+
+</table> 
+</div>
+
+
+
+</section>
+</div>
+
+
+<div class="main" id="japanese">
+
+<table style="width:100%">
+<caption><h1 style="color:Tomato;">Japanese</h1></caption>
+  <tr>
+  <th><div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="sushi.jpg" alt="Sushi" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Sushi</h1>
+    <h3>Price:</h3>
+    <h2>Rs 250/-</h2>
+    </div>
+  </div>
+</div>
+</th>
+
+<th>
+<div class="center">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="tonkatsu.jpg" alt="Tonkatsu" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Tonkatsu</h1>
+    <h3>Price:</h3>
+    <h2>Rs 250/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</th>
+
+<th>
+<div class="right">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="curryrice.jpg" alt="Curry Rice" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Curry Rice</h1>
+    <h3>Price:</h3>
+    <h2>Rs 200/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</th>
+</tr>
+
+
+<tr>
+  <td><div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="onigiri.jpg" alt="Onigiri" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Onigiri</h1>
+    <h3>Price:</h3>
+    <h2>Rs 99/-</h2>
+    </div>
+  </div>
+</div>
+</td>
+
+<td>
+<div class="center">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="takoyaki.jpg" alt="Takoyaki" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Takoyaki</h1>
+    <h3>Price:</h3>
+    <h2>Rs 40/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</td>
+
+<td>
+<div class="right">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="melonbread.jpg" alt="Melon Bread" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Melon Bread</h1>
+    <h3>Price:</h3>
+    <h2>Rs 80/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</td>
+</tr>
+
+
+</table> 
+</div>
+
+
+
+</section>
+</div>
+
+
+
+<div class="main" id="chinese">
+
+<table style="width:100%">
+<caption><h1 style="color:Tomato;">Chinese</h1></caption>
+  <tr>
+  <th><div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="springroll.jpg" alt="Spring Rolls" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Spring Rolls</h1>
+    <h3>Price:</h3>
+    <h2>Rs 99/-</h2>
+    </div>
+  </div>
+</div>
+</th>
+
+<th>
+<div class="center">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="chowmein.jpeg" alt="Chow Mein" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Chow Mein</h1>
+    <h3>Price:</h3>
+    <h2>Rs 300/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</th>
+
+<th>
+<div class="right">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="mapotofu.jpg" alt="Ma Po Tofu" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Ma Po Tofu</h1>
+    <h3>Price:</h3>
+    <h2>Rs 200/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</th>
+</tr>
+
+
+<tr>
+  <td><div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="sweetnsourpork.jpg" alt="Sweet N' Sour Pork" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Sweet N' Sour Pork</h1>
+    <h3>Price:</h3>
+    <h2>Rs 99/-</h2>
+    </div>
+  </div>
+</div>
+</td>
+
+<td>
+<div class="center">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="kungpaochicken.jpg" alt="Kung Pao Chicken" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Kung Pao Chicken</h1>
+    <h3>Price:</h3>
+    <h2>Rs 150/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</td>
+
+<td>
+<div class="right">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="dumplings.jpg" alt="Dumplings" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Dumplings</h1>
+    <h3>Price:</h3>
+    <h2>Rs 80/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</td>
+</tr>
+
+
+</table> 
+</div>
+
+
+
+</section>
+</div>
+
+
+<div class="main" id="desserts">
+
+<table style="width:100%">
+<caption><h1 style="color:Tomato;">Desserts</h1></caption>
+  <tr>
+  <th><div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="chocomolten.jpg" alt="Chocolate Molten Cake" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Chocolate Molten Cake</h1>
+    <h3>Price:</h3>
+    <h2>Rs 100/-</h2>
+    </div>
+  </div>
+</div>
+</th>
+
+<th>
+<div class="center">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="brownies.jpg" alt="Brownies" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Brownies</h1>
+    <h3>Price:</h3>
+    <h2>Rs 120/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</th>
+
+<th>
+<div class="right">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="creampuff.jpg" alt="Cream Puff Pastry" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Cream Puff Pastry</h1>
+    <h3>Price:</h3>
+    <h2>Rs 190/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</th>
+</tr>
+
+
+<tr>
+  <td><div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="potatocandy.jpg" alt="Potato Candy" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Potato Candy</h1>
+    <h3>Price:</h3>
+    <h2>Rs 150/-</h2>
+    </div>
+  </div>
+</div>
+</td>
+
+<td>
+<div class="center">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="creamcookiepizza.jpg" alt="Ice Cream Cookie Pizza" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Ice Cream Cookie Pizza</h1>
+    <h3>Price:</h3>
+    <h2>Rs 300/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</td>
+
+<td>
+<div class="right">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="strawberrypretzel.jpg" alt="Strawberry Pretzel" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+    <h1>Strawberry Pretzel</h1>
+    <h3>Price:</h3>
+    <h2>Rs 80/-</h2>
+    </div>
+  </div>
+</div>
+</div>
+</td>
+</tr>
+
+
+</table> 
+</div>
+
+</section>
+</div>
+
+<h1 style="color:white;" align="center">Ice Cream Special</h1>
+<img src="icecream.jpg" alt="Ice Cream Special" class="center" style="width:600px;height:450px;">
+<h1 align="center">At Rs/- 300 (All flavours included in picture)</h1>
+
+<a href="#menu">
+  <img src="icon_tokiya.png" alt="Go to top" title="Go to top" style="width:100px;height:100px;border:0;">
+</a>
+</div>
+</body>
+</html>
